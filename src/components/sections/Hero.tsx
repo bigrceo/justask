@@ -14,6 +14,7 @@ import { ProofStrip } from "@/components/hero/ProofStrip";
 
 const up = (d: number) => ({ initial: { opacity: 0, y: 8 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.35, delay: d, ease: [0.16, 1, 0.3, 1] as const } });
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function LastLaunch() {
   const { coins } = useLatest(1);
   const c = coins[0];
@@ -38,7 +39,7 @@ export function Hero() {
             Launch a coin by asking{" "}
             <span className="rounded-[0.16em] bg-highlight px-[0.08em] [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">Claude or ChatGPT.</span>
           </h1>
-          <div className="flex min-h-[26px] flex-wrap items-center gap-x-3 gap-y-2"><p className="text-[16px] font-medium text-ink-2 md:text-[18px]">Free. No wallet. 50% of the fees to you.</p><LastLaunch /></div>
+          <div className="flex min-h-[26px] flex-wrap items-center gap-x-3 gap-y-2"><p className="text-[16px] font-medium text-ink-2 md:text-[18px]">Free. No wallet. 50% of the fees to you.</p>{/* <LastLaunch /> back once launches are frequent */}</div>
           <motion.div {...up(0.05)}><LogoRow /></motion.div>
           <motion.div {...up(0.1)}><AskBlock /></motion.div>
           <motion.div {...up(0.15)}><ProofStrip /></motion.div>
