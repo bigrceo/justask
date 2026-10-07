@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { BRAND, MCP_URL, dexUrl, xUrl } from "@/lib/brand";
+import { GITHUB_URL } from "@/lib/brand";
 import { CopyUrl } from "@/components/ui/Copy";
 import { CaChip } from "@/components/hero/AskBlock";
 import { useToken } from "@/components/hero/useLive";
@@ -23,6 +24,7 @@ export function Footer() {
             {x && <a href={x} target="_blank" rel="noreferrer" className="flex h-9 items-center rounded-full bg-white/10 px-4 text-[13px] font-medium hover:bg-white hover:text-ink">X</a>}
             {ca && <a href={dexUrl(ca)} target="_blank" rel="noreferrer" className="flex h-9 items-center rounded-full bg-white/10 px-4 text-[13px] font-medium hover:bg-white hover:text-ink">DEX Screener</a>}
             <Link href="/explore" className="flex h-9 items-center rounded-full bg-white/10 px-4 text-[13px] font-medium hover:bg-white hover:text-ink">All coins</Link>
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="flex h-9 items-center rounded-full bg-white/10 px-4 text-[13px] font-medium hover:bg-white hover:text-ink">GitHub</a>
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/55 md:flex-row md:items-center md:justify-between">

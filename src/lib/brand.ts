@@ -10,6 +10,8 @@ export const BRAND = {
   explorer: "https://robinhoodchain.blockscout.com",
 } as const;
 
+export const GITHUB_URL = "https://github.com/bigrceo/justask";
+
 export const dexUrl = (ca: string) => `https://dexscreener.com/robinhood/${ca}`;
 export const xUrl = (h: string) => (h ? (h.startsWith("http") ? h : `https://x.com/${h.replace(/^@/, "")}`) : "");
 
